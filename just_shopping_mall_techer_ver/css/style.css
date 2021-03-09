@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #222328;
+}
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+}
+
+header > div{
+    float: left;
+    height: 100px;
+}
+
+.logo{
+    width: 100px;
+}
+
+.menu{
+    width: 800px;
+    height: 100px;
+    float: right;
+    right: 50px;
+    top: 50px;
+    z-index: 9999;
+    position: relative;
+}
+
+.main-menu{
+    height: 50px;
+    width: 800px;
+    background-color: #ddd;
+}
+
+.sub-menu{
+    position: absolute;
+    width: 800px;
+    background-color: #000;
+    height: 120px;
+    display: none;
+}
+
+.menu .sub-menu div{
+    float: right;
+    width: 800px;
+}
+
+.menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul li{
+    width: 25%;
+    height: 50px;
+    float: left;
+}
+
+.main-menu ul li a{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    color: black;
+    font-weight: bolder;
+}
+
+.sub-menu ul li{
+    width: 25%;
+    height: 30px;
+    float: left;
+}
+
+.sub-menu ul li ul li{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.sub-menu ul li ul li a{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    color: wheat;
+}
+
+.main-menu ul li a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.sub-menu ul li ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.slide{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide > img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+}
+
+.slide > img:first-child{
+    top: 0;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+}
+
+footer > div{
+    float: left;
+    height: 100px;
+    line-height: 100px;
+}
+
+footer .f-logo{
+    width: 300px;
+    text-align: left;
+}
+
+.copy{
+    width: 600px;
+    text-align: center;
+}
+
+footer .sns{
+    width: 300px;
+    text-align: right;
+}
+
+footer .sns a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5em;
+}
+
+.facebook{
+    background-color: #1240ff;
+    color: #fff;
+}
+
+.instar{
+    background-color: #ff3b00;
+    color: #fff;
+}
+
+.twitter{
+    background-color: #89bbff;
+    color: #fff;
+}.contents {
+    width: 1200px;
+    height: 200px;
+    }
+
+.contents > div{
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+}
+.notice {
+    padding: 20px 20px 0 0;
+}
+
+.tabs {
+    width: 400px;
+    height: 50px;
+}
+
+.tabs > div {
+    float: left;   /* 공지사항과 갤러리 탭을 나란히 */
+    height: 50px;
+    width: 80px;
+    border: 1px solid #000;
+    background-color: #888; 
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.tabs .tab-news {
+    background-color: #fff;
+    border-bottom: 0;
+}
+.tabs .tab-gallery {
+    border-left: 0;
+}
+
+.news, .gallery {
+    margin-top: -1px;
+    width: 100%;
+    height: 130px;
+    border: 1px solid #000;
+    padding-left: 5px;
+}
+
+.news ul li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #000;
+}
+
+.news ul li:first-child {
+    width: 260px;
+    padding-left: 5px;
+}
+
+.news ul li:last-child {
+    width: 100px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.gallery {
+    display: none;
+}
+
+.gallery img {
+    margin: 15px 9px 0 9px;
+}
+
+.link > a{
+    width: 25%;
+    height: 200px;
+    text-align: center;
+}
+
+
+#pop { /*요소를 페이지 한 가운데 위치*/
+ width: 500px;
+ height: 500px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ border: 1px solid #000;
+ background-color: #fff;
+ /*padding: 20px;*/
+ transform: translate(-50%, -50%);
+ display: none;
+}
+#pop p {
+ font-size: 20px;
+ padding: 0 20px;
+}
+
+.exit {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+}
+
+#pop .title {
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #000;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.banner{
+    padding-top: 50px;
+}
+
+.links{
+    padding: 20px 0 0 20px;
+}
+
+.links a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #008fda;
+    color: #fff;
+    margin-bottom: 5px;
+    border-radius:  5px;
+    border: 1px solid;
+}
