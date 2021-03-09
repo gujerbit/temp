@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.gondr.mappers.BoardMapper">
+	
+	<sql id="search">
+		<if test="keyword != null">
+			WHERE title LIKE CONCAT('%', #{keyword}, '%') OR content LIKE CONCAT('%', #{keyword}, '%')
+		</if>
+	</sql>
+	
+	<insert id="write">
+		INSERT INTO spring_boards (title, content, writer, writeDate) VALUES (#{title}, #{content}, #{writer}, NOW())
+	</insert>
+	
+	<select id="list" resultType="BoardVO">
+		SELECT * FROM spring_boards 
+		<include refid="search"></include> 
+		ORDER BY id DESC LIMIT #{pageStart}, #{perPageNum}
+	</select>
+	
+	<update id="update">
+		UPDATE spring_boards SET content = #{content}, title = #{title} WHERE id = #{id}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM spring_boards WHERE id = #{id}
+	</delete>
+	
+	<select id="view" resultType="BoardVO">
+		SELECT b.*, u.name, u.img, u.level 
+		FROM spring_boards AS b, spring_users AS u 
+		WHERE id = #{id} AND u.userid = b.writer
+	</select>
+	
+	<select id="cnt" resultType="Integer">
+		SELECT count(*) FROM spring_boards 
+		<include refid="search"></include>
+	</select>
+	
+	<select id="getBoard" resultType="BoardVO">
+		SELECT * FROM spring_boards WHERE id = #{id}
+	</select>
+		
+</mapper>
